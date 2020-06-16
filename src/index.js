@@ -14,6 +14,12 @@ const App = () => (
   <SecondaryButton>Secondary Button</SecondaryButton>
   <br />
   <TertiaryButton>Tertiary Button</TertiaryButton>
+  <br />
+  <PrimaryButton disabled>Primary Button</PrimaryButton>
+  <br />
+  <SecondaryButton disabled>Secondary Button</SecondaryButton>
+  <br />
+  <TertiaryButton disabled>Tertiary Button</TertiaryButton>
   </>
 );
 
