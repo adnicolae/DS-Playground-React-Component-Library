@@ -6,13 +6,14 @@ import { PrimaryButton,
 } from './components/Buttons';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle, darkTheme, defaultTheme } from './utils';
+import { SignUpModal } from './components/Modals';
 
 const App = () => {
   const [ useDarkTheme, setUseDarkTheme ] = useState(false);
   return (
     <ThemeProvider theme={ useDarkTheme ? darkTheme : defaultTheme }>
       <GlobalStyle />
-      <button 
+      {/* <button 
         style={{ margin: "0 16px 24px", padding: "8px", background: "none" }} 
         onClick={() => setUseDarkTheme(!useDarkTheme)}
       >
@@ -41,7 +42,9 @@ const App = () => {
         <SecondaryButton disabled>Secondary Button</SecondaryButton>
         <br />
         <TertiaryButton disabled>Tertiary Button</TertiaryButton>
-      </div>
+      </div> */}
+
+      <SignUpModal/>
 
     </ThemeProvider>
   )
