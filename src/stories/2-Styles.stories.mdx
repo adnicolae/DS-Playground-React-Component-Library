@@ -1,0 +1,26 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { action } from '@storybook/addon-actions';
+import { withKnobs, boolean } from '@storybook/addon-knobs';
+import Colors from '../assets/figma/Colors.png';
+import Neutrals from '../assets/figma/Neutrals.png';
+import StatusColors from '../assets/figma/StatusColors.png';
+
+<Meta title="Primitives|Colors" />
+
+# Primary colors
+
+<Story name="primary-colors">
+  <img src={ Colors } />
+</Story>
+
+# Neutral colors
+
+<Story name="neutral-colors">
+  <img src={ Neutrals } />
+</Story>
+
+# Status colors
+
+<Story name="status-colors">
+  <img src={ StatusColors } />
+</Story>

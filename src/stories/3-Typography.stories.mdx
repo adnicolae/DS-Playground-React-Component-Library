@@ -1,0 +1,42 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { action } from '@storybook/addon-actions';
+import { withKnobs, boolean } from '@storybook/addon-knobs';
+import Typescale from '../assets/figma/Typescale.png';
+import TypescaleDark from '../assets/figma/Typescale-dark.png';
+
+<Meta title="Primitives|Typography" />
+
+# Primary
+
+<Story name="typescale">
+  <img src={ Typescale } />
+</Story>
+
+### Access methods
+
+```js
+typeScale = {
+  h1: "3.05rem",
+  h2: "2.4rem",
+  h3: "1.9rem",
+  h4: "1.25rem",
+  h5: "1.1rem",
+  p: "1rem",
+  helperText: "0.8rem",
+  copyrightText: "0.7rem"
+};
+```
+**Example**: define an element's font-size as h1:
+```js
+import { typeScale } from '../utils';
+
+export const TextElement = styled.button`
+  font-size: `${ typeScale.h1 }`;
+`
+```
+
+# Dark
+
+<Story name="typescale-dark">
+  <img src={ TypescaleDark } />
+</Story>

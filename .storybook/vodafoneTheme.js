@@ -2,8 +2,8 @@ import { create } from "@storybook/theming/create";
 
 export default create({
   base: "light",
-
-  colorSecondary: "#e60000",
+  colorPrimary: "#e60000",
+  colorSecondary: "#ff4e4e",
 
   // // Toolbar default and active colors
   barSelectedColor: "#e60000",
