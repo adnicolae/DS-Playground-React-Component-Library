@@ -5,7 +5,7 @@ import { PrimaryButton,
   TertiaryButton 
 } from './components/Buttons';
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyle, darkTheme, defaultTheme } from './utils';
+import { GlobalStyle, darkTheme, defaultTheme, vodafoneTheme } from './utils';
 import { SignUpModal } from './components/Modals';
 
 
@@ -13,7 +13,7 @@ const App = () => {
   const [ useDarkTheme, setUseDarkTheme ] = useState(false);
   const [ showModal, setShowModal ] = useState(false);
   return (
-    <ThemeProvider theme={ useDarkTheme ? darkTheme : defaultTheme }>
+    <ThemeProvider theme={ vodafoneTheme }>
       <GlobalStyle />
         <PrimaryButton 
           style={{ margin: '15px 16px 24px' }}

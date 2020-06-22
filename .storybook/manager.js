@@ -1,6 +1,6 @@
 import { addons } from "@storybook/addons";
-import myTheme from "./vodafoneTheme";
+import vodafone from "./vodafoneTheme";
 
 addons.setConfig({
-  theme: vodafoneTheme
+  theme: vodafone
 });
