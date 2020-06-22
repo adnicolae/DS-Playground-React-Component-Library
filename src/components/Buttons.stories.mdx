@@ -1,6 +1,7 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { action } from '@storybook/addon-actions';
 import { PrimaryButton, SecondaryButton, TertiaryButton } from "./Buttons";
+import { withKnobs, boolean } from '@storybook/addon-knobs';
 
 <Meta title="Design System|Buttons" component={PrimaryButton} />
 
@@ -13,9 +14,9 @@ Button labels express what action will occur when the user interacts with it.
 
 Primary buttons are used as a call to action and indicate the most important action on a page.
 
-<Preview withToolbar>
+<Preview>
   <Story name="primary">
-    <PrimaryButton onClick={action('clicked')}>Hello world</PrimaryButton>
+    <PrimaryButton disabled={boolean("Disabled", false)} onClick={action('clicked')} onMouseOver={action('hovered')}>Hello world</PrimaryButton>
   </Story>
 </Preview>
 
@@ -23,9 +24,9 @@ Primary buttons are used as a call to action and indicate the most important act
 
 Secondary buttons are the 'back' to the primary button's 'next', or the 'cancel' to the 'submit'. They provide users with an alternative to the primary action.
 
-<Preview withToolbar>
+<Preview>
   <Story name="secondary">
-    <SecondaryButton>Hello world</SecondaryButton>
+    <SecondaryButton onClick={action('clicked')} onMouseOver={action('hovered')}>Hello world</SecondaryButton>
   </Story>
 </Preview>
 
@@ -33,6 +34,8 @@ Secondary buttons are the 'back' to the primary button's 'next', or the 'cancel'
 
 Tertiary buttons are usually used for miscellaneous actions: important actions that are not required immediately, such as 'edit', 'delete', 'add new'.
 
-<Story name="tertiary">
-  <TertiaryButton>Hello world</TertiaryButton>
-</Story>
+<Preview>
+  <Story name="tertiary">
+    <TertiaryButton onClick={action('clicked')} onMouseOver={action('hovered')}>Hello world</TertiaryButton>
+  </Story>
+</Preview>
