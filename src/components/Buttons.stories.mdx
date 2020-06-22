@@ -1,0 +1,38 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { action } from '@storybook/addon-actions';
+import { PrimaryButton, SecondaryButton, TertiaryButton } from "./Buttons";
+
+<Meta title="Design System|Buttons" component={PrimaryButton} />
+
+# Buttons
+
+Buttons are used to trigger actions within an application.
+Button labels express what action will occur when the user interacts with it.
+
+## Primary buttons
+
+Primary buttons are used as a call to action and indicate the most important action on a page.
+
+<Preview withToolbar>
+  <Story name="primary">
+    <PrimaryButton onClick={action('clicked')}>Hello world</PrimaryButton>
+  </Story>
+</Preview>
+
+## Secondary buttons
+
+Secondary buttons are the 'back' to the primary button's 'next', or the 'cancel' to the 'submit'. They provide users with an alternative to the primary action.
+
+<Preview withToolbar>
+  <Story name="secondary">
+    <SecondaryButton>Hello world</SecondaryButton>
+  </Story>
+</Preview>
+
+## Tertiary buttons
+
+Tertiary buttons are usually used for miscellaneous actions: important actions that are not required immediately, such as 'edit', 'delete', 'add new'.
+
+<Story name="tertiary">
+  <TertiaryButton>Hello world</TertiaryButton>
+</Story>
