@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { typeScale } from '../utils';
 import { Illustrations, CloseIcon } from '../assets';
-import { PrimaryButton } from './Buttons';
+import { PrimaryButton, SecondaryButton } from './Buttons';
 import { useSpring, animated, config } from 'react-spring';
+import { EmailInput, PasswordInput } from "./TextFields";
 
 const ModalWrapper = styled.div`
   width: 800px;
@@ -20,7 +21,12 @@ const ModalWrapper = styled.div`
   margin-left: 50px;
 `;
 
-const SignUpHeader = styled.h4`
+const RowModalWrapper = styled(ModalWrapper)`
+  flex-direction: row;
+  justify-content: space-around;
+`;
+
+const ModalHeader = styled.h4`
   font-size: ${ typeScale.h4 };
   margin-top: 10px;
   margin-bottom: 15px;
@@ -55,14 +61,37 @@ export const SignUpModal = ({ showModal, setShowModal}) => {
   return (
     <animated.div style={ animation }>
       <ModalWrapper>
-        <img src={ Illustrations.SignUp } alt="Sign up for account" aria-hidden="true" />
-        <SignUpHeader>Sign up!</SignUpHeader>
+        <img src={ Illustrations.VdfSignUp } alt="Sign up for account" aria-hidden="true" />
+        <ModalHeader>Sign up!</ModalHeader>
         <SignUpText>Sign up today to get access to your account!</SignUpText>
         <PrimaryButton>Sign up</PrimaryButton>
         <CloseModalButton aria-label="Close modal">
           <CloseIcon />
         </CloseModalButton>
       </ModalWrapper>
+    </animated.div>
+  );
+}
+
+export const SignInModal = ({ showModal, setShowModal}) => {
+  const animation = useSpring({
+    opacity: showModal ? 1 : 0,
+    transform: showModal ? `translateY(0)` : `translateY(-200%)`,
+    config: config.slow
+  });
+
+  return (
+    <animated.div style={ animation }>
+      <RowModalWrapper>
+        <div>
+          <ModalHeader style={{ marginBottom: '20px' }}>Sign In</ModalHeader>
+          <EmailInput label="Email" placeholder="andrei.nicolae@vodafone.com" />
+          <PasswordInput label="Password" />
+          <SecondaryButton style={{ margin: "16px 16px 0 0" }}>Sign up</SecondaryButton>
+          <PrimaryButton>Sign in</PrimaryButton>
+        </div>
+        <img src={ Illustrations.VdfSignIn } alt="Sign up for account" aria-hidden="true" />
+      </RowModalWrapper>
     </animated.div>
   );
 }
