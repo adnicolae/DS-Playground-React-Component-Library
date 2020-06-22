@@ -1,5 +1,6 @@
 export const headingsFont = '"Open Sans", sans-serif';
 export const primaryFont = '"Roboto", sans-serif';
+export const primaryMono = '"Roboto Mono", sans-serif';
 
 export const typeScale = {
   h1: "3.05rem",

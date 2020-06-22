@@ -6,7 +6,7 @@ import { PrimaryButton,
 } from './components/Buttons';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle, darkTheme, defaultTheme, vodafoneTheme } from './utils';
-import { SignUpModal } from './components/Modals';
+import { SignUpModal, SignInModal } from './components/Modals';
 
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
         <PrimaryButton 
           style={{ margin: '15px 16px 24px' }}
           onClick={() => setShowModal(!showModal)}>Toggle modal</PrimaryButton>
-        <SignUpModal showModal={showModal} />
+        <SignInModal showModal={showModal} />
     </ThemeProvider>
   )
 };
