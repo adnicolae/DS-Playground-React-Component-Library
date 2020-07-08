@@ -7,9 +7,9 @@ export const contexts = [
     title: 'Themes',
     components: [ ThemeProvider ],
     params: [
+      { name: "Vodafone Theme", props: { theme: vodafoneTheme, default: true } },
       { name: "Default Theme", props: { theme: defaultTheme } },
       { name: "Dark Theme", props: { theme: darkTheme } },
-      { name: "Vodafone Theme", props: { theme: vodafoneTheme, default: true }}
     ],
     options: {
       deep: true,
